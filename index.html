@@ -34,5 +34,5 @@ if(delta>0.8){$('verdict').textContent='Lüften ist sinnvoll';$('explain').textC
 else if(delta < -0.8){$('verdict').textContent='Zum Entfeuchten nicht lüften';$('explain').textContent='Die Außenluft hat einen höheren Wasserdampf-Partialdruck. Lüften würde bei gleicher Innentemperatur die relative Feuchte rechnerisch auf '+format(pred,0)+' % verändern.';$('result').className='result bad';}
 else{$('verdict').textContent='Kaum Entfeuchtungseffekt';$('explain').textContent='Der Feuchteunterschied ist gering. Aufgrund der Messungenauigkeit ist ein deutlicher Trocknungseffekt nicht sicher zu erwarten.';$('result').className='result neutral';}
 }
-ids.forEach(id=>$(id).addEventListener('input',calc));calc();});calc();
+ids.forEach(id=>$(id).addEventListener('input',calc));calc();
 </script><script>if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')) {window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(console.warn));}</script></body></html>
